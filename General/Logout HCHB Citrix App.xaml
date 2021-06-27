@@ -5,6 +5,11 @@
         <RequiredArgumentAttribute />
       </x:Property.Attributes>
     </x:Property>
+    <x:Property sap2010:Annotation.AnnotationText="Delay for Actions" Name="Delay" Type="InArgument(x:Int32)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -54,7 +59,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -93,17 +98,16 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Logs out from the HCHB Citrix application" DisplayName="Logout HCHB Citrix App" sap:VirtualizedContainerService.HintSize="480,624" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap2010:Annotation.AnnotationText="Logs out from the HCHB Citrix application" DisplayName="Logout HCHB Citrix App" sap:VirtualizedContainerService.HintSize="480,438" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch-Logout HCHB Citrix App" sap:VirtualizedContainerService.HintSize="438,501" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch-Logout HCHB Citrix App" sap:VirtualizedContainerService.HintSize="438,315" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -111,10 +115,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Logout HCHB Citrix App" sap:VirtualizedContainerService.HintSize="376,274" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence DisplayName="Logout HCHB Citrix App" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -160,17 +164,14 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="If logout button present" sap:VirtualizedContainerService.HintSize="376,404" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="x:Int32" Default="2000" Name="delay" />
-                        </Sequence.Variables>
+                      <Sequence DisplayName="If logout button present" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <p:CvClickWithDescriptor CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (15,20,20,19)&quot; +&#xA;&quot;Anchor: Text 'Clinical Manager' (73,23,98,16)&quot;]" DesignTimeCacheId="3d7bfed3-e27c-44b5-9974-f1bc080f5075" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="4bec66acd2ada527ffca5591d4695465" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V2">
+                        <p:CvClickWithDescriptor CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (15,20,20,19)&quot; +&#xA;&quot;Anchor: Text 'Clinical Manager' (73,23,98,16)&quot;]" DesignTimeCacheId="3d7bfed3-e27c-44b5-9974-f1bc080f5075" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="4bec66acd2ada527ffca5591d4695465" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V2">
                           <p:CvClickWithDescriptor.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -205,12 +206,12 @@
                           </p:CvClickWithDescriptor.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </p:CvClickWithDescriptor>
-                        <p:CvClickWithDescriptor CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="[delay]" Descriptor="[&quot;Target: Text 'Logout' (465,347,42,17)&quot;]" DesignTimeCacheId="1d006d66-e1a9-420d-ab7a-c6573d11207e" DesignTimeScaleFactor="1" DisplayName="CV Click - Logout" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="5adaefe330ef9197ddd7de79067fceee" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V2">
+                        <p:CvClickWithDescriptor CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="[Delay]" Descriptor="[&quot;Target: Text 'Logout' (465,347,42,17)&quot;]" DesignTimeCacheId="1d006d66-e1a9-420d-ab7a-c6573d11207e" DesignTimeScaleFactor="1" DisplayName="CV Click - Logout" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="5adaefe330ef9197ddd7de79067fceee" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V2">
                           <p:CvClickWithDescriptor.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
@@ -238,6 +239,12 @@
                               </ui:Target.WaitForReady>
                             </ui:Target>
                           </p:CvClickWithDescriptor.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
                         </p:CvClickWithDescriptor>
                       </Sequence>
                     </If.Then>
@@ -249,39 +256,59 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;LOGOUT_HCHB_NOT_FOUND&quot;]" />
-                        <Throw Exception="[new SystemException(&quot;LOGOUT_HCHB_NOT_FOUND&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <Throw Exception="[new BusinessRuleException(&quot;LOGOUT_HCHB_NOT_FOUND&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
                       </Sequence>
                     </If.Else>
                   </If>
                   <Sequence DisplayName="Post-Check" sap:VirtualizedContainerService.HintSize="400,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="ui:Window" Name="WindowApp" />
+                      <Variable x:TypeArguments="x:String" Name="WindowTitle" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <p:CvElementExistsWithDescriptor sap2010:Annotation.AnnotationText="CV Element Exist Activity checks whether logout button still exist" Descriptor="[&quot;Target: Icon (15,20,20,19)&quot; +&#xA;&quot;Anchor: Text 'Clinical Manager' (73,23,98,16)&quot;]" DesignTimeCacheId="3d7bfed3-e27c-44b5-9974-f1bc080f5075" DesignTimeScaleFactor="1" DisplayName="PostCheck" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_2" InformativeScreenshot="fec589e8e8e22d3446354c38cd5e2fcd" Result="[stillExist]" Version="V2">
-                      <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
-                        <uc:CvDescriptor>
-                          <uc:CvDescriptor.Anchors>
-                            <x:Array Type="uc:CvElementDescriptor">
-                              <uc:CvElementDescriptor DesignTimeArea="73, 23, 98, 16" ElementType="Text" Text="Clinical Manager" />
-                            </x:Array>
-                          </uc:CvDescriptor.Anchors>
-                          <uc:CvDescriptor.Target>
-                            <uc:CvElementDescriptor DesignTimeArea="15, 20, 20, 19" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAICSURBVDhP1ZC9a1NRGIerHSqCjoKLLnXslI/BJNRkyZAlH1uWkP/B0bkiVaISoRhpBCldhA6BDEKIigHJ2IqikBjzcSHkalp7e5v7kfvznHNP7uWeRArSxQfe6f29zznvu4Rz5j8WWqTkUxP3PvxC4FUfy5strDxqI7wr4UHzEIo+tYMCC4UGyVZbKm5u/cDSZnuuLj5sY63cw/veKZ9wmRPqUwu7X5SFIrGuPOlg79sJn7TxCOmanSMDV5922AD9yerzLl5/PUH/2GS97f1jXH9m//wCqRtbXUiKaQsIHuHEtHD37U9HdutFFyPVDVMs8mr70MAq6dHc5cffsfFxzLuCkB567WXPCe58VnjHi0Ye3j74zXLL5OHbO33eEYRH2hSX7n9CIBDA+vodHLTc4AxZnTKRWNfIGSiO0CK7DIdDJptVNBrFZDLhCRdROpNRHKGiKEzi8/k8FYvFeMJF13XsvXnHZCsb+8jlcrwjrKxpGgqFAhP5/X4kk0mMx+7BKXSTwWCAdDrNcqFQCKVSiXcFIQ1LkoRwOOxIU6kU6vU6ZFlmJ6lUKojH404/kUhgNBpxgyCkGIaBarXKBs6qSCSCWq3GJ23mhBTTNNFoNNjri0T01plMBs1mk0+4LBRS6Pr0fsViEdlslomCwSDy+TzK5TJUVeVJL38V/ivnLAT+AEBzEFRlXxWGAAAAAElFTkSuQmCC" />
-                          </uc:CvDescriptor.Target>
-                        </uc:CvDescriptor>
-                      </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                    <ui:GetActiveWindow ApplicationWindow="[WindowApp]" DisplayName="Get Active Window" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="GetActiveWindow_1">
+                      <ui:GetActiveWindow.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:GetActiveWindow.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </p:CvElementExistsWithDescriptor>
-                    <If Condition="[stillExist]" DisplayName="LogoutExists" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_2">
+                    </ui:GetActiveWindow>
+                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="title" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                      <ui:GetAttribute.Result>
+                        <OutArgument x:TypeArguments="x:String">[WindowTitle]</OutArgument>
+                      </ui:GetAttribute.Result>
+                      <ui:GetAttribute.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[WindowApp]" Id="75b828d7-e1fd-4f61-a2f5-176ec1476952">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetAttribute.Target>
+                    </ui:GetAttribute>
+                    <If Condition="[WindowTitle.Contains(&quot;Citrix Receiver&quot;)]" DisplayName="LogoutExists" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -289,18 +316,19 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Successfully logged out&quot;]" />
+                      </If.Then>
+                      <If.Else>
                         <Sequence DisplayName="Exception" sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;LOGOUT_HCHB_CITRIX_APP_FAILED&quot;]" />
-                          <Throw Exception="[new SystemException(&quot;LOGOUT_HCHB_CITRIX_APP_FAILED&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                          <Throw Exception="[new BusinessRuleException(&quot;LOGOUT_HCHB_CITRIX_APP_FAILED&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
                         </Sequence>
-                      </If.Then>
-                      <If.Else>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Successfully logged out&quot;]" />
                       </If.Else>
                     </If>
                   </Sequence>
@@ -890,7 +918,7 @@
               </ActivityFunc>
             </p:CVScope.OCREngine>
             <p:CVScope.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be494731-45fb-4019-b810-4710057fa313" InformativeScreenshot="0587d025bce3b60645499a9a14d8749a" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='HCHB Main - Training - \\Remote' /&gt;" WaitForReady="INTERACTIVE">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be494731-45fb-4019-b810-4710057fa313" InformativeScreenshot="0587d025bce3b60645499a9a14d8749a" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='HCHB Main*' /&gt;" WaitForReady="INTERACTIVE">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -920,7 +948,37 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Throw Exception="[exception]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+            <Sequence DisplayName="Exception" sap:VirtualizedContainerService.HintSize="242,205" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[exception.Message]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:LogMessage>
+              <Throw Exception="[New Exception(&quot;LOGOUT_HCHB_CITRIX_APP_FAILED&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+            </ActivityAction.Argument>
+            <Rethrow sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
